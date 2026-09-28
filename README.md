@@ -1,6 +1,6 @@
 # Enterprise Cloud Portfolio
 
-An architect-to-engineer portfolio demonstrating how business requirements become secure, repeatable, observable cloud infrastructure.
+An enterprise cloud architecture and engineering portfolio demonstrating how business requirements become secure, repeatable, and observable cloud infrastructure.
 
 ## Project 1: Resilient Logistics Platform
 
