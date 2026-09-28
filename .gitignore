@@ -1,0 +1,26 @@
+# Terraform working data and state
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Local variables and credentials
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+.env
+.env.*
+*.pem
+*.key
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+tmp/
