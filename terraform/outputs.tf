@@ -22,3 +22,8 @@ output "application_security_group_id" {
   description = "Security group for the future application tier."
   value       = aws_security_group.application.id
 }
+
+output "application_url" {
+  description = "Public URL for the logistics shipment-tracking application."
+  value       = "http://${aws_lb.application.dns_name}"
+}
