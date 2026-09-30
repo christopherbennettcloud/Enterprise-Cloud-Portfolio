@@ -59,3 +59,17 @@ variable "private_app_subnet_cidrs" {
     error_message = "Exactly two private application subnet CIDR blocks must be supplied."
   }
 }
+
+variable "private_db_subnet_cidrs" {
+  description = "CIDR blocks for the private database subnets."
+  type        = list(string)
+  default = [
+    "10.20.20.0/24",
+    "10.20.21.0/24"
+  ]
+
+  validation {
+    condition     = length(var.private_db_subnet_cidrs) == 2
+    error_message = "Exactly two private database subnet CIDR blocks are required."
+  }
+}
