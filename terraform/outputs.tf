@@ -27,3 +27,17 @@ output "application_url" {
   description = "Public URL for the logistics shipment-tracking application."
   value       = "http://${aws_lb.application.dns_name}"
 }
+output "database_endpoint" {
+  description = "Private PostgreSQL database connection endpoint."
+  value       = aws_db_instance.application.endpoint
+}
+
+output "database_master_secret_arn" {
+  description = "ARN of the AWS-managed secret containing the database credentials."
+  value       = aws_db_instance.application.master_user_secret[0].secret_arn
+}
+
+output "infrastructure_alerts_topic_arn" {
+  description = "ARN of the SNS topic used for infrastructure alerts."
+  value       = aws_sns_topic.infrastructure_alerts.arn
+}
